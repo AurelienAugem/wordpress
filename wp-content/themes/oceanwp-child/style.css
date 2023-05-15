@@ -6,8 +6,68 @@ Author: OceanWP
 Author URI: https://oceanwp.org/about-oceanwp/
 Description: OceanWP is the perfect theme for your project. Lightweight and highly extendable, it will enable you to create almost any type of website such a blog, portfolio, business website and WooCommerce storefront with a beautiful &amp; professional design. Very fast, responsive, RTL &amp; translation ready, best SEO practices, unique WooCommerce features to increase conversion and much more. You can even edit the settings on tablet &amp; mobile so your site looks good on every device. Work with the most popular page builders as Elementor, Beaver Builder, Brizy, Visual Composer, Divi, SiteOrigin, etc... Developers will love his extensible codebase making it a joy to customize and extend. Best friend of Elementor &amp; WooCommerce. Looking for a Multi-Purpose theme? Look no further! Check the demos to realize that it's the only theme you will ever need: https://oceanwp.org/demos/
 Tags: two-columns,right-sidebar,footer-widgets,blog,news,custom-background,custom-menu,post-formats,rtl-language-support,sticky-post,editor-style,threaded-comments,translation-ready,buddypress,custom-colors,featured-images,full-width-template,theme-options,e-commerce,block-styles,wide-blocks,accessibility-ready
-Version: 3.4.3.1683724135
-Updated: 2023-05-10 15:08:55
+Version: 3.4.3.1683795548
+Updated: 2023-05-11 10:59:08
 
 */
 
+:root {
+    --button-bg-color: #dc9f96;
+    --button-bg-color-hover: #c02e44;
+}
+body{
+    font-family: 'syne', sans-serif;
+}
+.display-header {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+}
+.logo{
+    object-fit: contain;
+    
+}
+#header-main-button {
+    color: white;
+    background-color: var(--button-bg-color);
+    height: 80px;
+    width: 236px;
+    padding: 30px 61px;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+#header-main-button:hover {
+    color: white;
+    background-color: var(--button-bg-color-hover);
+}
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+li.menu-item a{
+    display: inline-block;
+    text-align: center;
+}
+
+#menu-header{
+    font-size: 1em;
+
+}
+a:hover{
+    color: black;
+    font-size: 0.8em;
+}
+
+.display-footer{
+    background-color: white;
+    width: 100%;
+    height: 60px;
+}
