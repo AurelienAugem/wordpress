@@ -15,21 +15,26 @@ Updated: 2023-05-11 10:59:08
     --button-bg-color: #dc9f96;
     --button-bg-color-hover: #c02e44;
 }
+
 body{
     font-family: 'syne', sans-serif;
 }
+
 .display-header {
     display: flex;
     flex-direction: row;
     height: 80px;
     width: 100%;
-    justify-content: center;
     background-color: white;
 }
-.logo{
-    object-fit: contain;
-    
+
+.logo-card{
+    width: 200px;
+    height: auto;
+    padding-top: 30px;
+
 }
+
 #header-main-button {
     color: white;
     background-color: var(--button-bg-color);
@@ -40,27 +45,23 @@ body{
     font-weight: 700;
     
 }
+
 #header-main-button:hover {
     color: white;
     background-color: var(--button-bg-color-hover);
 }
-.header-nav{
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+
+#menu-header {
+    font-size: 1em;
+    list-style-type: none;
 }
 
 li.menu-item a{
     display: inline-block;
     text-align: center;
+    text-decoration: none;
 }
 
-#menu-header{
-    font-size: 1em;
-
-}
 a:hover{
     color: black;
     font-size: 0.8em;
