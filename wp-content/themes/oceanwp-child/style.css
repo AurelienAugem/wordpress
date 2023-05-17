@@ -141,3 +141,8 @@ a:hover{
     border-radius: 5px;
     margin-left: 11px !important;
 }
+
+.display-com-form{
+    display: flex;
+    flex-direction: row;
+}
