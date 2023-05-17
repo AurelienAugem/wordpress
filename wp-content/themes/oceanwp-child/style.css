@@ -89,7 +89,7 @@ a:hover{
 }
 /************************** Commande ******************************/
 .buy{
-    display: flexbox;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
@@ -105,7 +105,7 @@ a:hover{
 }
 
 .plus-minus{
-    display: flexbox;
+    display: flex;
     flex-direction: column;
 }
 
