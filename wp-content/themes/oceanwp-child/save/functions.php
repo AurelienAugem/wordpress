@@ -22,16 +22,3 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
-
-function selectVente(){
-    echo "<div class=\"buy\">";
-    echo "<input class=\"sold-items\" type=\"search\" placeholder=\"0\" >";
-    echo "<div class=\"plus-minus\">";
-    echo "<input class=\"plus-button\" type=\"submit\" value=\"+\">";
-    echo "<input class=\"minus-button\" type=\"submit\" value=\"-\">";
-    echo "</div>";
-    echo "<input class=\"ok-button\" type=\"submit\" value=\"OK\">";
-    echo "</div>";
-}
-
-add_shortcode('commande', 'selectVente');

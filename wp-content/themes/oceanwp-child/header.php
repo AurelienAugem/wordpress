@@ -23,7 +23,7 @@
 
 	<?php wp_body_open(); ?>
 
-		<div class="display-header">
+		<nav class="display-header">
 			
 				<a class="logo-card" href="http://localhost/wordpress/">
 					<img src="http://localhost/wordpress/wp-content/uploads/2023/05/Logo-1.png" alt="Logo de Planty">
@@ -31,7 +31,7 @@
 				<?php wp_nav_menu( array('theme_location' => 'menu-header'));?>
 				<a href="http://localhost/wordpress/commander/"  id="header-main-button" >Commander</a>
 					
-		</div>
+		</nav>
 
 		<main id="main" class="site-main clr"<?php oceanwp_schema_markup( 'main' ); ?> role="main">
 
