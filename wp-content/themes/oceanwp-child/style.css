@@ -101,12 +101,23 @@ a:hover{
     height: 56px;
     border-radius: 5px 0px 0px 5px;
     box-sizing: border-box;
+    border: hidden;
 
 }
 
 .plus-minus{
     display: flex;
     flex-direction: column;
+}
+
+.plus-button{
+    border-top-right-radius: 5px;
+    background-color: var(--button-bg-color);
+}
+
+.minus-button{
+    border-bottom-right-radius: 5px;
+    background-color: var(--button-bg-color);
 }
 
 .ok-button{
