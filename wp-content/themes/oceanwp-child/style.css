@@ -21,6 +21,8 @@ body{
     font-family: 'syne', sans-serif;
 }
 
+/******************************* Header *********************************/
+
 .display-header {
     display: flex;
     flex-direction: row;
@@ -141,8 +143,57 @@ a:hover{
     border-radius: 5px;
     margin-left: 11px !important;
 }
-
+/*********************** Formulaire de commande **********************************/
 .display-com-form{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.com-form-1{
+    width: 50%;
+}
+
+.com-form-2{
+    width: 50%;
+}
+
+.com-form-1 p label{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.com-form-2 p label{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.commande-title{
+    color: white;
+}
+
+.form-text-field{
+    border-radius: 7px !important;
+}
+
+.com-button-position{
+    display: flex;
+    width: 100%;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.commande-button{
+    width: 200px;
+    height: 55px;
+    border-radius: 5px !important;
+    margin-top: 40px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
 }
