@@ -25,6 +25,7 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 function selectVente(){
     echo 
+        
         "<div class=\"buy\">
             <input class=\"sold-items\" type=\"search\" placeholder=\"0\">
             <div class=\"plus-minus\">
@@ -32,7 +33,26 @@ function selectVente(){
                 <input class=\"minus-button\" type=\"submit\" value=\"-\">
             </div>
             <input class=\"ok-button\" type=\"submit\" value=\"OK\">
+        
         </div>";
 }
 
 add_shortcode('commande', 'selectVente');
+
+function is_admin_user() {
+    return current_user_can( 'manage_options' );
+}
+
+function add_header_button($adminButton, $menuHeader){
+
+    if(is_user_logged_in() && is_admin_user() && $menuHeader->menu === 'menu-header'){
+
+        add_action( 'admin_init', 'wpdocs_remove_edit_menu' );
+        $adminButton .= '<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="http://localhost/wordpress/wp-admin/">Admin</a></li>';
+
+    }
+
+    return $adminButton;
+}
+
+add_filter( 'wp_nav_menu_items', 'add_header_button', 10, 2 );
