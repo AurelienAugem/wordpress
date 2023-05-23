@@ -34,9 +34,9 @@ body{
 }
 
 .logo-card{
-    width: 30%;
-    height: auto;
-    padding: 20px 20px;
+    width: 200px;
+    height: 20px;
+    padding: 35px 30px;
 
 }
 
@@ -58,20 +58,15 @@ body{
 }
 
 #menu-header {
-    display: flexbox;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
     font-size: 16px;
     font-weight: 400;
-    list-style-type: none;
-    margin-top: 25px;
-    margin-left: 400px;
-    
+    list-style-type: none;  
 }
 
 #menu-header li{
-    display: inline;
-    padding-left: 60px;
-    width: 100px;
+    padding: 10px 0 0 60px;
     height: 100%;
 }
 

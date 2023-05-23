@@ -23,7 +23,35 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
 
-function selectVente(){
+/********************************** Menu de l'en-tête **********************************/
+//Enregistrement du menu 
+function create_menu_header(){
+    register_nav_menu('menu-header',__('Menu Header'));
+}
+add_action( 'init', 'create_menu_header' );
+//Vérification des droits de l'utilisateur actuel
+function is_admin_user() {
+    return current_user_can( 'manage_options' );
+}
+//Inclusion du lien admin dans le menu
+function planty_add_header_button($adminButton, $menuHeader){
+
+    if(is_admin_user() && $menuHeader->theme_location == 'menu-header'){
+
+        $lien = '<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="http://localhost/wordpress/wp-admin/">Admin</a></li>';
+        $adminButton .= $lien;
+
+    }
+    return $adminButton;
+}
+
+add_filter('show_admin_bar', '__return_false');
+add_filter('wp_nav_menu_items', 'planty_add_header_button', 10, 2);
+
+
+/******************************* Shortcode pour les formulaires de commande *************************/
+
+function select_vente(){
     echo 
         
         "<div class=\"buy\">
@@ -37,22 +65,4 @@ function selectVente(){
         </div>";
 }
 
-add_shortcode('commande', 'selectVente');
-
-function is_admin_user() {
-    return current_user_can( 'manage_options' );
-}
-
-function add_header_button($adminButton, $menuHeader){
-
-    if(is_user_logged_in() && is_admin_user() && $menuHeader->menu === 'menu-header'){
-
-        add_action( 'admin_init', 'wpdocs_remove_edit_menu' );
-        $adminButton .= '<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="http://localhost/wordpress/wp-admin/">Admin</a></li>';
-
-    }
-
-    return $adminButton;
-}
-
-add_filter( 'wp_nav_menu_items', 'add_header_button', 10, 2 );
+add_shortcode('commande', 'select_vente');
