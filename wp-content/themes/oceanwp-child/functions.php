@@ -36,12 +36,14 @@ function is_admin_user() {
 //Inclusion du lien admin dans le menu
 function planty_add_header_button($adminButton, $menuHeader){
 
-    if(is_admin_user() && $menuHeader->theme_location == 'menu-header'){
+    if(is_user_logged_in() && is_admin_user()){
+        if($menuHeader->theme_location == 'menu-header'){
 
-        $lien = '<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="http://localhost/wordpress/wp-admin/">Admin</a></li>';
-        $adminButton .= $lien;
-
-    }
+            $lien = '<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="http://localhost/wordpress/wp-admin/">Admin</a></li>';
+            $adminButton .= $lien;
+    
+        }
+    } 
     return $adminButton;
 }
 

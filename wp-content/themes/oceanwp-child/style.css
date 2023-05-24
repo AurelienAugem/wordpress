@@ -35,7 +35,9 @@ body{
 
 .logo-card{
     width: 200px;
+    min-width: 150px;
     height: 20px;
+    min-height: 15px;
     padding: 35px 30px;
 
 }
@@ -62,12 +64,22 @@ body{
     flex-direction: row;
     font-size: 16px;
     font-weight: 400;
-    list-style-type: none;  
+    list-style-type: none;
+    padding-left: 600px;  
 }
 
 #menu-header li{
     padding: 10px 0 0 60px;
+    width: 200px;
     height: 100%;
+}
+
+a{
+    transition: font-size 0.3s ease-in-out;
+}
+
+:focus{
+    outline: 0;
 }
 
 a:hover{
@@ -158,23 +170,21 @@ a:hover{
 }
 
 .com-form-1{
-    width: 45%;
+    width: 100%;
 }
 
 .com-form-2{
-    width: 45%;
+    width: 100%;
 }
 
-.com-form-1 p label{
+.com-form-label{
     color: white;
     font-size: 20px;
     font-weight: 400;
 }
 
-.com-form-2 p label{
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
+#nom, #prenom, #email, #adress, #postcode, #town{
+    width: 100% !important;
 }
 
 .commande-title{
@@ -184,6 +194,8 @@ a:hover{
 .form-text-field{
     border-radius: 7px !important;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+    background-color: white !important;
+    width: 100% !important;
 }
 
 .com-button-position{
@@ -202,4 +214,20 @@ a:hover{
     margin-right: auto !important;
     font-size: 15px !important;
     font-weight: 400 !important;
+}
+
+/**************************** Formulaire de rencontre ****************************************/
+
+.renc-form-label{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.renc-background-form{
+    background-image: url(http://localhost/wordpress/wp-content/uploads/2023/05/Group-16.png);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-position-x: -14%;
+    padding: 35px;
 }
