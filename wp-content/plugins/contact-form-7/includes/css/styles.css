@@ -76,7 +76,7 @@
 
 .wpcf7-spinner {
 	visibility: hidden;
-	display: inline-block;
+	display: block;
 	background-color: #23282d; /* Dark Gray 800 */
 	opacity: 0.75;
 	width: 24px;
